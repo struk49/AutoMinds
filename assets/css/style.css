@@ -1,0 +1,413 @@
+/*google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+
+/*asterisk wildcard selector to overide default styles added by the browser*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+/*general styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*generic project styles */
+    color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+.hidden-heading{
+    display: none;
+}
+
+
+/* header */
+header {
+    background-color: #fff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+#menu {
+    letter-spacing: 4px;
+    font-size: 110%;
+    list-style-type: none;
+}
+
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+
+/*navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/*navbar toggle */
+#nav-toggle:checked~nav{
+    display: block;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+
+.nav-toggle-label{
+    font-size: 2rem;
+}
+
+
+/*main*/
+main {
+    /* make main element take any surplus space to push the footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
+/* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+}
+
+/*hero section*/
+#hero{
+
+    height: 1180px;
+    width: 100%;
+    background: url('../images/statue-liberty-3.jpg')no-repeat center center/cover;
+}
+
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(199, 208, 199, 0.2);
+    font-size: 220%;
+    position: absolute;
+    width: 100%;
+    bottom: 80px;
+    min-height: 300px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+
+#cover-text > h2, #cover-text > h3 {
+    color: rgb(16, 17, 16);
+}
+
+#reasons{
+
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+#reasons h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
+
+#places-1 > div,
+#places-2 > div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+
+#places p {
+    padding: 0 20px;
+}
+
+#places{
+    margin: 10px;  
+}
+
+#places hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-bg{
+    background: url('../images/times-square.jpg') no-repeat top center/cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px auto;
+    /* makes square image round*/
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#places-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#times{
+    background: url('../images/central-park-visit.jpg')no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* Creates a grid of meetup time divs over the background image */
+    border: 2px solid white;
+}
+
+#times h3 {
+    /* Override the heading colour set in general styles */
+    color: #fafafa;
+}
+
+
+/*gallery page*/
+#photos img {
+    width: 100%;
+    line-height: 1em;
+
+}
+
+#photos {
+    line-height: 0;
+}
+
+
+#signup{
+    background: url(../images/love-running-signup-image.webp);
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;   
+}
+
+
+#signup-form{
+    color: #fff;
+    background-color:rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-button {
+    margin-top: 20px;
+    padding: 15px 32px;
+    font-size: 100%;
+    border-radius: 2px;
+    background-color: #454b1b;
+    color: #fafafa;
+
+}
+
+
+/*footer*/
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+
+#social-networks i {
+    font-size: 180%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+/*media query: large to landscape photos (576 and up) */
+@media screen and (min-width: 576px) {
+    #photos{
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
+/* media query: tablets and larger screens (768 and up) */
+@media screen and (min-width: 768px) {
+    /*header*/
+    nav{
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu {
+        display: flex;
+    }
+    #menu li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0.05rem;
+    }
+    /* push main down to accommadate larger header */
+    main {
+        margin-top: 79px;
+    }
+    #cover-text > h2, #cover-text > h3 {
+        color: black;
+    }
+    /* reasons section places1 and places2*/
+    #places-1,
+    #places-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    #places-1 > div,
+    #places-2 > div {
+        width: 75%;
+    }
+    #places-2 > div{
+        text-align: end;
+        align-self: flex-end;
+    }
+    /*gallery*/
+    #photos{
+        column-count: 3;
+    }
+    /*form*/
+    #signup{
+        background-position: center;
+        position: relative;
+    }
+    #signup-form{
+        position: absolute;
+        max-width: 400px;
+        left: 10%;
+        top: 50px;
+
+    }
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
+  
+}
+
+
+/* larger devices (laptop and desktops, 992px and above) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }
+    /*hero section*/
+#hero{
+    
+    height: 600px;
+    width: 100%;
+    background: url('../images/statue-liberty-3.jpg')no-repeat center center/cover;
+    }
+    /*gallery*/
+    #photos{
+        column-count: 4;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    #places{
+        display: flex;
+        flex-direction: row;
+    }
+    #places > div{
+       flex: 1;
+    }
+    #places-image{
+        order: 0;
+    }
+
+    #places-2{
+        order: 1;
+    }
+
+    #places-2 > div{
+        align-self: flex-start ;
+    }
+
+    #places-1 > div {
+        align-self: flex-end;
+    }
+}
