@@ -186,7 +186,7 @@ main {
 }
 
 #times{
-    background: url('../images/central-park-visit.jpg')no-repeat center/cover;
+    background: url('../images/places-image.jpg')no-repeat center/cover;
     display: flex;
     flex-wrap: wrap;
 }
