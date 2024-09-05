@@ -17,6 +17,7 @@ body {
     /*generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
+    background: rgb(237, 153, 164);
 
 }
 
@@ -167,7 +168,7 @@ main {
 }
 
 #circle-cover-bg{
-    background: url('../images/times-square.jpg') no-repeat top center/cover;
+    background: url('../images/chatbot-center.jpg') no-repeat top center/cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px auto;
