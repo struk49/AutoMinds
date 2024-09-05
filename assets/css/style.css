@@ -35,7 +35,7 @@ h1, h2, h3 {
 
 /* header */
 header {
-    background-color: #fff;
+    background-color: rgb(237, 153, 164);
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
@@ -73,11 +73,11 @@ header a {
 /*navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color: #fff;
+    background-color: rgb(237, 153, 164);
     width: 100%;
     left: 0;
     padding: 0 1rem;
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 2px 2px #010101;
     display: none;
     top: 100%;
 }
@@ -109,10 +109,9 @@ main {
 
 /*hero section*/
 #hero{
-
-    height: 1180px;
     width: 100%;
-    background: url('../images/statue-liberty-3.jpg')no-repeat center center/cover;
+    height: 1200px;
+    background: url('../images/chatbot-1.png')no-repeat center center/cover ;
 }
 
 
@@ -292,6 +291,7 @@ main {
         column-count: 2;
         column-gap: 0;
     }
+    
 }
 
 /* media query: tablets and larger screens (768 and up) */
@@ -378,7 +378,7 @@ main {
     
     height: 600px;
     width: 100%;
-    background: url('../images/statue-liberty-3.jpg')no-repeat center center/cover;
+    background: url('../images/chatbot_hero.jpg')no-repeat center center/cover;
     }
     /*gallery*/
     #photos{
