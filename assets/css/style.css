@@ -210,15 +210,28 @@ main {
 }
 
 
-/*gallery page*/
-#photos img {
-    width: 100%;
-    line-height: 1em;
-
+.container-post
+{
+   margin: 0 auto;
+   background-color: pink;
+   width: 100%;
+   max-width: 1200px;
+   margin-bottom: 50px;
 }
-
-#photos {
-    line-height: 0;
+.container-post h1{
+   margin: 10px;
+   margin-top: 100px;
+   text-align: center;
+}
+.container-post h2{
+   margin: 10px;
+   text-align: center;
+}
+.container-post p{
+   margin: 10px;
+   text-align: center;
+   font-size: 20px;
+   font-weight: bolder;
 }
 
 
