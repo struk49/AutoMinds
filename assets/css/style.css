@@ -213,7 +213,7 @@ main {
 .container-post
 {
    margin: 0 auto;
-   background-color: pink;
+   background-color: rgb(227, 160, 153);
    width: 100%;
    max-width: 1200px;
    margin-bottom: 50px;
