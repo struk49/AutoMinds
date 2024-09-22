@@ -3,28 +3,8 @@
 <head>
     <title>Contact Form</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "PI38ULXyHLhiD3skz",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('service_uqdxjtr').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+    <script type="text/javascript"></script>
+    
 </head>
 <body>
     <form id="contact-form">
