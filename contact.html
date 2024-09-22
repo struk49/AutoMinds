@@ -3,21 +3,44 @@
 <head>
     <title>Contact Form</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript"></script>
     <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
     
 </head>
 <body>
+    <header>
+        <a href="index.html">
+            <h1 id="logo">AutoMinds</h1>
+        </a>
+        <input type="checkbox" id="nav-toggle" name="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <i class="fa-solid fa-burger"></i>
+        </label>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-post">
+        <h1>Message us to book a consultation</h1>
+        
+
     <form id="contact-form">
         <!-- To simplify the tutorial, the value is static. -->
-        <input type="hidden" name="contact_number" value="697483">
+        <input type="hidden" name="contact_number" value="697483" class="text-input">
         <label>Name</label>
-        <input type="text" name="user_name">
+        <input type="text" name="user_name" class="text-input">
         <label>Email</label>
-        <input type="email" name="user_email">
+        <input type="email" name="user_email" class="text-input">
         <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
+        <textarea name="message" class="text-input"></textarea>
+        <input type="submit" value="Send" class="join-button">
     </form>
+    </div>
+    
 </body>
 </html>
