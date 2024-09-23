@@ -2,11 +2,30 @@
 <html>
 <head>
     <title>Contact Form</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "PI38ULXyHLhiD3skz",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_uqdxjtr', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -26,9 +45,7 @@
         </nav>
     </header>
     <div class="container-post">
-        <h1>Message us to book a consultation</h1>
-        
-
+        <h1>Contact us to arrnage a consultaion</h1>
     <form id="contact-form">
         <!-- To simplify the tutorial, the value is static. -->
         <input type="hidden" name="contact_number" value="697483" class="text-input">
@@ -41,6 +58,5 @@
         <input type="submit" value="Send" class="join-button">
     </form>
     </div>
-    
 </body>
 </html>
